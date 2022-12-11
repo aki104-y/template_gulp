@@ -1,0 +1,28 @@
+/* header
+------------------------------------------------------ */
+@use "../base/setting" as *;
+@use "../global/mixin/breakpoint" as *;
+
+.header {
+  
+}
+
+.header__inner {
+  padding-left: $padding-side-sp;
+  padding-right: $padding-side-sp;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  @include mq(lg) {
+    max-width: $layout-width;
+    margin: 0 auto;
+    padding-left: $padding-side;
+    padding-right: $padding-side;
+  }
+}
+
+.header-nav {
+  @include mq(md) {
+    display: flex;
+  }
+}

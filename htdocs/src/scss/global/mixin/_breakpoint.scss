@@ -1,0 +1,18 @@
+// ブレークポイント
+$breakpoints: (
+	'xs': "screen and (min-width: 0)",	//	sp	//
+  'sm': "screen and (min-width: 576px)",	// sp	//
+  'md': "screen and (min-width: 768px)",	//	tab	//
+  'lg': "screen and (min-width: 992px)",	//	pc	//
+  'xl': "screen and (min-width: 1200px)",	//	pc	//
+  'xxl': "screen and (min-width: 1400px)"	//	pc	//
+);
+
+// メディアクエリー
+@mixin mq($breakpoint) {
+
+	@media #{map-get($breakpoints, $breakpoint)} {
+
+		@content;
+	}
+}

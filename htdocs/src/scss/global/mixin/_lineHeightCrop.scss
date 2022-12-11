@@ -1,0 +1,19 @@
+@mixin lineHeightCrop($fontsize, $lineFeed) {
+  $lineheight: $lineFeed / $fontsize;
+
+  &::before,
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+  }
+
+  &::before {
+    margin-top: calc((1 - #{$lineheight}) * 0.5em);
+  }
+
+  &::after {
+    margin-bottom: calc((1 - #{$lineheight}) * 0.5em);
+  }
+}

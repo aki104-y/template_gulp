@@ -1,0 +1,5 @@
+@mixin link-colors($colors-name) {
+  &:hover, &:active, &:focus {
+    color: color($colors-name);
+  }
+}

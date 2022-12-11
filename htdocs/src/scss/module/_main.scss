@@ -1,0 +1,19 @@
+/* main
+------------------------------------------------------ */
+@use "../base/setting" as *;
+@use "../global/mixin/breakpoint" as *;
+
+.main__inner {
+  padding-left: $padding-side-sp;
+  padding-right: $padding-side-sp;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mq(md) {
+    max-width: $layout-width;
+    margin: 0 auto;
+    padding-left: $padding-side;
+    padding-right: $padding-side;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

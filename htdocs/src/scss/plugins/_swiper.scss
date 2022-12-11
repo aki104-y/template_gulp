@@ -1,0 +1,70 @@
+/* swiper
+------------------------------------------------------ */
+@use "../global/" as *;
+@use "../base/setting" as *;
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position:relative;
+}
+  .swiper {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    padding-bottom: 39px;
+   } //スライダーコントロールを下部に表示させるための余白を設置する場合
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  @include mq(lg) {
+    width: 60px;
+    height: 60px;
+    top: 335px;
+  }
+}
+
+.swiper-button-prev {
+  left: -20px;
+  @include mq(lg) {
+    left: -30px;
+  }
+}
+
+.swiper-button-next {
+  right: -20px;
+  @include mq(lg) {
+    right: -30px;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: "Material Icons Round";
+  font-size: rem(24);
+  color: $c_key1;
+  @include mq(lg) {
+    font-size: rem(32);
+  }
+}
+
+.swiper-button-prev:after {
+  content: "navigate_before";
+}
+
+.swiper-button-next:after {
+  content: "navigate_next";
+}
+
+.swiper-pagination-bullet-active {
+  background: $c_key1;
+}
